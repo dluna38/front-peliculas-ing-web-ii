@@ -1,15 +1,8 @@
 import {useState} from "react";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-function Nav({changeContent}){
+function Nav(){
     const [isLogIn,setIsLogIn] = useState(true);
-
-    function moveToAdministrar(){
-        changeContent("admin");
-    }
-    function moveToHome(){
-        changeContent("home")
-    }
     return(
         <nav className="navbar navbar-expand-lg " style={{backgroundColor: "#e3f2fd"}}>
             <div className="container-fluid">
@@ -35,14 +28,6 @@ function Nav({changeContent}){
                 </div>
             </div>
         </nav>
-    );
-}
-
-function NavForAdmin({onClickAdmin}){
-    return(
-        <li className="nav-item">
-            <a role="button" className="nav-link" onClick={onClickAdmin}>Administrar</a>
-        </li>
     );
 }
 

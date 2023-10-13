@@ -9,11 +9,6 @@ function HomeHtml(){
     useEffect(() => {
         cargarContenido();
     }, []);
-    async function cargarSeries() {
-        let resultSeries = await searchMedia({limit:6,tipo:"serie"});
-        console.log(resultSeries);
-        setListaSerires(resultSeries);
-    }
     async function cargarContenido() {
         setLoading(true);
         let resultMovies = await searchMedia({limit:6,tipo:"pelicula"});
