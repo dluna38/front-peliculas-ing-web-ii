@@ -39,7 +39,7 @@ function CarrielContenido({mediaArray}){
                 <div key={index} className="col-2" >
                     <div className="card mb-3 text-center" style={{width:"210px"}}>
                         <img loading="lazy" src={
-                            media.imgUrlPortada ?"http://localhost:5000/api/tmbd/images/w342"+media.imgUrlPortada:process.env.PUBLIC_URL+'/imgs/img-not-found.jpg'}
+                            media.imgUrlPortada ?process.env.REACT_APP_BASE_URL_BACKEND+"tmbd/images/w342"+media.imgUrlPortada:process.env.PUBLIC_URL+'/imgs/img-not-found.jpg'}
                              onError={(e) => {
                                  e.target.onerror = null;
                                  e.target.src = process.env.PUBLIC_URL+'/imgs/img-not-found.jpg';
